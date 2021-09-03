@@ -1,12 +1,10 @@
 export default class Calculator {
-  constructor(month, day, year) {
-    this.month = month;
-    this.day = day;
-    this.year = year;
+  constructor(date) {
+    this.date = date;
   }
   
   earthAge(currentDate) {
-    const birthday = new Date(this.year, this.month - 1, this.day);
+    const birthday = new Date(this.date);
     return ((currentDate - birthday) / 31536000000);
   }
 

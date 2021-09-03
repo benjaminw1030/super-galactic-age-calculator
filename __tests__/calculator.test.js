@@ -6,14 +6,12 @@ describe('Calculator', () => {
   let currentDate;
   
   beforeEach(() => {
-    calculator = new Calculator(10, 30, 1984);
+    calculator = new Calculator("1984-10-30");
     currentDate = 1630685647903; //freezes current date with value of Date.now() on 9/3/2021.
   });
 
   test('should create a calculator object', () => {
-    expect(calculator.month).toEqual(10);
-    expect(calculator.day).toEqual(30);
-    expect(calculator.year).toEqual(1984);
+    expect(calculator.date).toEqual("1984-10-30");
   });
 
   test('should calculate Earth age from input', () => {
@@ -21,7 +19,7 @@ describe('Calculator', () => {
   });
 
   test('should calculate Mercury age from input', () => {
-    expect(calculator.mercuryAge(currentDate)).toBeCloseTo(153.62);
+    expect(calculator.mercuryAge(currentDate)).toBeCloseTo(153.63);
   });
 
   test('should calculate Venus age from input', () => {
@@ -42,7 +40,7 @@ describe('Calculator', () => {
 
   test('should calculate years to live on any planet from input', () => {
     expect(calculator.yearsToLive("Mercury", 80, currentDate)).toBeCloseTo(179.71);
-    expect(calculator.yearsToLive("Venus", 80, currentDate)).toBeCloseTo(69.57);
+    expect(calculator.yearsToLive("Venus", 80, currentDate)).toBeCloseTo(69.56);
     expect(calculator.yearsToLive("Mars", 80, currentDate)).toBeCloseTo(22.94);
     expect(calculator.yearsToLive("Jupiter", 80, currentDate)).toBeCloseTo(3.64);
   });
@@ -52,7 +50,7 @@ describe('Calculator', () => {
   });
 
   test('should output a special string describing how many years a person has lived past their life expectancy', () => {
-    calculator = new Calculator(10, 30, 1904);
-    expect(calculator.yearsToLiveOutput("Earth", 80, currentDate)).toEqual("You have lived 36.92 years past your expected lifespan on Earth. Keep it up!");
+    calculator = new Calculator("1904-10-30");
+    expect(calculator.yearsToLiveOutput("Earth", 80, currentDate)).toEqual("You have lived 36.93 years past your expected lifespan on Earth. Keep it up!");
   });
 });
