@@ -7,7 +7,7 @@ describe('Calculator', () => {
   
   beforeEach(() => {
     calculator = new Calculator(10, 30, 1984);
-    currentDate = 1630685647903; //freezes current date value at current time with value of Date.now() on 9/3/2021.
+    currentDate = 1630685647903; //freezes current date with value of Date.now() on 9/3/2021.
   });
 
   test('should create a calculator object', () => {
@@ -41,9 +41,9 @@ describe('Calculator', () => {
   });
 
   test('should calculate years to live on any planet from input', () => {
-    expect(calculator.yearsToLive("Mercury", 80, currentDate)).toBeCloseTo(3.64);
-    expect(calculator.yearsToLive("Venus", 80, currentDate)).toBeCloseTo(3.64);
-    expect(calculator.yearsToLive("Mars", 80, currentDate)).toBeCloseTo(3.64);
+    expect(calculator.yearsToLive("Mercury", 80, currentDate)).toBeCloseTo(179.71);
+    expect(calculator.yearsToLive("Venus", 80, currentDate)).toBeCloseTo(69.57);
+    expect(calculator.yearsToLive("Mars", 80, currentDate)).toBeCloseTo(22.94);
     expect(calculator.yearsToLive("Jupiter", 80, currentDate)).toBeCloseTo(3.64);
   });
 });

@@ -30,6 +30,14 @@ export default class Calculator {
     switch (planet) {
       case "Earth":
         return lifeExpectancy - this.earthAge(currentDate);
+      case "Mercury":
+        return lifeExpectancy/.24 - this.mercuryAge(currentDate);
+      case "Venus":
+        return lifeExpectancy/.62 - this.venusAge(currentDate);
+      case "Mars":
+        return lifeExpectancy/1.88 - this.marsAge(currentDate);
+      case "Jupiter":
+        return lifeExpectancy/11.86 - this.jupiterAge(currentDate);
     }
   }
 }
