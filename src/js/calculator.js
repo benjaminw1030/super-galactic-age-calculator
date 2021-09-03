@@ -13,5 +13,9 @@ export default class Calculator {
   mercuryAge(currentDate) {
     return (this.earthAge(currentDate)/.24);
   }
+
+  venusAge(currentDate) {
+
+  }
 }
 

@@ -3,9 +3,11 @@ import Calculator from '../src/js/calculator.js';
 describe('Calculator', () => {
 
   let calculator;
+  let currentDate;
   
   beforeEach(() => {
     calculator = new Calculator(10, 30, 1984);
+    currentDate = 1630685647903; //freezes current date value at current time with value of Date.now() on 9/3/2021.
   });
 
   test('should create a calculator object', () => {
@@ -14,13 +16,16 @@ describe('Calculator', () => {
     expect(calculator.year).toEqual(1984);
   });
 
-  test('should calculate earth age from input', () => {
-    const currentDate = 1630685647903 //freezes current date value at current time with value of Date.now();
+  test('should calculate Earth age from input', () => {
     expect(calculator.earthAge(currentDate)).toBeCloseTo(36.87);
   });
-  test('should calculate mercury age from input', () => {
-    const currentDate = 1630685647903
+
+  test('should calculate Mercury age from input', () => {
     expect(calculator.mercuryAge(currentDate)).toBeCloseTo(153.62);
+  });
+
+  test('should calculate Venus age from input', () => {
+    expect(calculator.venusAge(currentDate)).toBeCloseTo(59.47);
   });
 
 });
