@@ -7,7 +7,12 @@ import Calculator from './js/calculator.js';
 $(document).ready(function() {
   $('#calculator-form').submit(function(event) {
     event.preventDefault();
-    const birthday = new Calculator(date);
-    $('#response').append("<p>" + response + "</p>");
+    const currentDate = Date.now();
+    const birthday = $("#birthday").val();
+    const planet = $("#planet").val();
+    const lifeExpectancy = $("#life-expectancy").val();
+    const age = new Calculator(birthday);
+    $('#result').fadeIn();
+    $('#ytl-output').text(age.yearsToLiveOutput(planet, lifeExpectancy, currentDate));
   });
 });

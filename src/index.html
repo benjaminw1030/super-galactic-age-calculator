@@ -5,12 +5,24 @@
 </head>
 <body>
   <h3>Super Galactic Age Calculator</h3>
-  <p>Planets go around the sun at different rates. Calculate your age on any of the eight planets in our solar system!</p>
+  <p>Planets go around the sun at different rates. Calculate your age on any of the eight planets in our solar system and see how many years you might have left on them!</p>
   <form id="calculator-form">
     <label for="birthday">Enter your birthday:</label>
-    <input id="birthday" type="date" name="birthday">
+    <input id="birthday" type="date" name="birthday" value = "1980-01-01">
+    <label for="planet">See your age on:</label>
+    <select name="planet" id="planet">
+      <option value="Earth">Earth</option>
+      <option value="Mercury">Mercury</option>
+      <option value="Venus">Venus</option>
+      <option value="Mars">Mars</option>
+      <option value="Jupiter">Jupiter</option>
+    </select>
+    <label for="life-expectancy">Enter your expected lifespan:</label>
+    <input type="number" id="life-expectancy" name="life-expectancy" min="1" max="150" step="1" value="80">
     <button type="submit">Calculate your age!</button>
   </form>
-  <div id="response"></div>
+  <div id="result">
+    <p id="ytl-output"></p>
+  </div>
 </body>
 </html>
