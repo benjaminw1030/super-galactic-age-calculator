@@ -26,7 +26,7 @@ export default class Calculator {
     return (this.earthAge(currentDate)/11.86);
   }
 
-  lifeExpectancy(currentDate) {
+  yearsToLive(planet, lifeExpectancy, currentDate) {
     
   }
 }

@@ -35,4 +35,8 @@ describe('Calculator', () => {
   test('should calculate Jupiter age from input', () => {
     expect(calculator.jupiterAge(currentDate)).toBeCloseTo(3.11);
   });
+
+  test('should calculate years to live on Earth from input', () => {
+    expect(calculator.yearsToLive("earth", 80, currentDate)).toBeCloseTo(41.33);
+  });
 });
