@@ -10,7 +10,7 @@ describe('Calculator', () => {
 
   test('should create a calculator object', () => {
     expect(calculator.month).toEqual(10);
-    expect(calculator.year).toEqual(30);
-    expect(calculator.month).toEqual(1984);
+    expect(calculator.day).toEqual(30);
+    expect(calculator.year).toEqual(1984);
   });
 });
