@@ -40,8 +40,14 @@ export default class Calculator {
         return lifeExpectancy/11.86 - this.jupiterAge(currentDate);
     }
   }
+
   yearsToLiveOutput(planet, lifeExpectancy, currentDate) {
-    const years = this.yearsToLive(planet, lifeExpectancy, currentDate).toFixed(2);
-    return `You have ${years} years left to live on ${planet}. Make the most of it!`;
+    const years = this.yearsToLive(planet, lifeExpectancy, currentDate);
+    const yearsOutput = Math.abs(years).toFixed(2)
+    if (years < 0) {
+      return `You have lived ${yearsOutput} years past your expected lifespan on ${planet}. Keep it up!`;
+    } else {
+      return `You have ${yearsOutput} years left to live on ${planet}. Make the most of it!`;
+    }
   }
 }
