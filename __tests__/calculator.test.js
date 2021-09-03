@@ -13,4 +13,8 @@ describe('Calculator', () => {
     expect(calculator.day).toEqual(30);
     expect(calculator.year).toEqual(1984);
   });
+
+  test('should calculate earth age from input', () => {
+    expect(calculator.earthAge()).toEqual(36.86);
+  });
 });

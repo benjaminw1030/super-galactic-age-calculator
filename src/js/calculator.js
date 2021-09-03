@@ -4,4 +4,10 @@ export default class Calculator {
     this.day = day;
     this.year = year;
   }
+
+  earthAge() {
+    
+  }
 }
+
+let currentDate = Date.now();
