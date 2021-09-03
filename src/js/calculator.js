@@ -4,10 +4,10 @@ export default class Calculator {
     this.day = day;
     this.year = year;
   }
-
-  earthAge() {
-    
+  
+  earthAge(currentDate) {
+    const birthday = new Date(this.year, this.month - 1, this.day);
+    return parseFloat(((currentDate - birthday) / 31536000000).toFixed(2));
   }
 }
 
-let currentDate = Date.now();

@@ -3,7 +3,7 @@ import Calculator from '../src/js/calculator.js';
 describe('Calculator', () => {
 
   let calculator;
-
+  
   beforeEach(() => {
     calculator = new Calculator(10, 30, 1984);
   });
@@ -15,6 +15,7 @@ describe('Calculator', () => {
   });
 
   test('should calculate earth age from input', () => {
-    expect(calculator.earthAge()).toEqual(36.86);
+    const currentDate = 1630685647903 //freezes current date value at current time with value of Date.now();
+    expect(calculator.earthAge(currentDate)).toEqual(36.87);
   });
 });
