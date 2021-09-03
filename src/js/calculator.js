@@ -7,11 +7,11 @@ export default class Calculator {
   
   earthAge(currentDate) {
     const birthday = new Date(this.year, this.month - 1, this.day);
-    return parseFloat(((currentDate - birthday) / 31536000000).toFixed(2));
+    return ((currentDate - birthday) / 31536000000);
   }
 
   mercuryAge(currentDate) {
-
+    return (this.earthAge(currentDate)/.24);
   }
 }
 
