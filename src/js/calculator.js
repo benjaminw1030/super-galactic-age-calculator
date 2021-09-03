@@ -17,8 +17,17 @@ export default class Calculator {
   venusAge(currentDate) {
     return (this.earthAge(currentDate)/.62);
   }
-  marsAge(currentDate) {
 
+  marsAge(currentDate) {
+    return (this.earthAge(currentDate)/1.88);
+  }
+
+  jupiterAge(currentDate) {
+
+  }
+
+  lifeExpectancy(currentDate) {
+    
   }
 }
 

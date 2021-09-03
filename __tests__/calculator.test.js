@@ -31,5 +31,4 @@ describe('Calculator', () => {
   test('should calculate Mars age from input', () => {
     expect(calculator.marsAge(currentDate)).toBeCloseTo(19.61);
   });
-
 });
