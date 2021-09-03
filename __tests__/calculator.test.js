@@ -20,7 +20,7 @@ describe('Calculator', () => {
   });
   test('should calculate mercury age from input', () => {
     const currentDate = 1630685647903
-    expect(calculator.mercuryAge(currentDate)).toEqual(36.87);
+    expect(calculator.mercuryAge(currentDate)).toEqual(153.62);
   });
 
 });
