@@ -46,4 +46,8 @@ describe('Calculator', () => {
     expect(calculator.yearsToLive("Mars", 80, currentDate)).toBeCloseTo(22.94);
     expect(calculator.yearsToLive("Jupiter", 80, currentDate)).toBeCloseTo(3.64);
   });
+
+  test('should output a string describing how many years a person has left to live', () => {
+    expect(calculator.yearsToLiveOutput("Earth", 80, currentDate)).toEqual("You have 43.13 years left to live on Earth. Make the most of it!");
+  });
 });

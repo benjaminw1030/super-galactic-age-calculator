@@ -40,5 +40,7 @@ export default class Calculator {
         return lifeExpectancy/11.86 - this.jupiterAge(currentDate);
     }
   }
-}
+  yearsToLiveOutput(planet, lifeExpectancy, currentDate) {
 
+  }
+}
