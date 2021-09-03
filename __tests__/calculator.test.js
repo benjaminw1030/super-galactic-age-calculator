@@ -33,19 +33,24 @@ describe('Calculator', () => {
   });
 
   test('should calculate Earth age from input', () => {
-    planet = "Earth";
     expect(calculator.planetAge(currentDate)).toBeCloseTo(36.87);
   });
 
   test('should calculate age on any planet from input', () => {
-    planet = "Mercury";
-    expect(calculator.planetAge(currentDate, "Mercury")).toBeCloseTo(153.63);
-    expect(calculator.planetAge(currentDate, "Venus")).toBeCloseTo(59.47);
-    expect(calculator.planetAge(currentDate, "Mars")).toBeCloseTo(19.61);
-    expect(calculator.planetAge(currentDate, "Jupiter")).toBeCloseTo(3.11);
-    expect(calculator.planetAge(currentDate, "Saturn")).toBeCloseTo(3.11);
-    expect(calculator.planetAge(currentDate, "Uranus")).toBeCloseTo(3.11);
-    expect(calculator.planetAge(currentDate, "Neptune")).toBeCloseTo(3.11);
+    calculator.planet = "Mercury";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(153.63);
+    calculator.planet = "Venus";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(59.47);
+    calculator.planet = "Mars";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(19.61);
+    calculator.planet = "Jupiter";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(3.11);
+    calculator.planet = "Saturn";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(1.25);
+    calculator.planet = "Uranus";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(0.44);
+    calculator.planet = "Neptune";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(0.22);
   });
 
   test('should calculate years to live on Earth from input', () => {

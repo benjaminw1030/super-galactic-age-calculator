@@ -28,7 +28,7 @@ export default class Calculator {
 
   planetAge(currentDate) {
     const birthday = new Date(this.date);
-    return ((currentDate - birthday) / 31536000000) / orbitalPeriod();
+    return ((currentDate - birthday) / 31536000000) / this.orbitalPeriod();
   }
 
   mercuryAge(currentDate) {
