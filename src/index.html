@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Super Galactic Age Calculator</title>
 </head>
 <div class="container">
+
   <body>
     <div class="jumbotron">
       <h3>Super Galactic Age Calculator</h3>
     </div>
-    <p>Planets go around the sun at different rates. Calculate your age on any of the eight planets in our solar system and see how many years you might have left on them!</p>
+    <p>Planets go around the sun at different rates. Calculate your age on any of the eight planets in our solar system
+      and see how many years you might have left on them!</p>
     <form id="calculator-form">
-      <label for="birthday">Enter your birthday:</label>
-      <input id="birthday" type="date" name="birthday" value = "1980-01-01">
+      <div class="form-group">
+        <label for="birthday">Enter your birthday:</label>
+        <input class="form-control" id="birthday" type="date" name="birthday" value="1980-01-01">
+      </div>
       <label for="planet">See your age on:</label>
-      <select name="planet" id="planet">
-        <option value="Earth">Earth</option>
-        <option value="Mercury">Mercury</option>
-        <option value="Venus">Venus</option>
-        <option value="Mars">Mars</option>
-        <option value="Jupiter">Jupiter</option>
-      </select>
-      <label for="life-expectancy">Enter your expected lifespan:</label>
-      <input type="number" id="life-expectancy" name="life-expectancy" min="1" max="150" step="1" value="80">
-      <button type="submit">Calculate your age!</button>
+      <div class="form-group">
+        <select name="planet" class="form-control" id="planet">
+          <option value="Mercury">Mercury</option>
+          <option value="Venus">Venus</option>
+          <option value="Earth">Earth</option>
+          <option value="Mars">Mars</option>
+          <option value="Jupiter">Jupiter</option>
+          <option value="Saturn">Saturn</option>
+          <option value="Uranus">Uranus</option>
+          <option value="Neptune">Neptune</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="life-expectancy">Enter your expected lifespan:</label>
+        <input type="number" class="form-control" id="life-expectancy" name="life-expectancy" min="1" max="150" step="1"
+          value="80">
+      </div>
+      <button type="submit" class="btn-dark">Calculate your age!</button>
     </form>
     <div id="result">
-      <p id="age-output"></p>
-      <p id="ytl-output"></p>
+      <div class="card">
+        <div class="card-body">
+          <img id="Mercury" class="rounded planet" src="assets/images/Mercury.jpg" alt="Mercury">
+          <img id="Venus" class="rounded planet" src="assets/images/Venus.jpg" alt="Venus">
+          <img id="Earth" class="rounded planet" src="assets/images/Earth.jpg" alt="Earth">
+          <img id="Mars" class="rounded planet" src="assets/images/Mars.jpg" alt="Mars">
+          <img id="Jupiter" class="rounded planet" src="assets/images/Jupiter.jpg" alt="Jupiter">
+          <img id="Saturn" class="rounded planet" src="assets/images/Saturn.jpg" alt="Saturn">
+          <img id="Uranus" class="rounded planet" src="assets/images/Uranus.jpg" alt="Uranus">
+          <img id="Neptune" class="rounded planet" src="assets/images/Neptune.jpg" alt="Neptune">
+          <p id="age-output"></p>
+          <p id="ytl-output"></p>
+        </div>
+      </div>
     </div>
 </div>
+<div class="container" id="portfolio">
+  <p>Back to <a href="https://benjaminw1030.github.io/portfolio/">my portfolio</a>.</p>
+</div>
 </body>
+
 </html>

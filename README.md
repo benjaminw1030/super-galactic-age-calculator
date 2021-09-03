@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### A project made with TDD and objects.
 
 #### By Benjamin Wilson
 
@@ -16,6 +16,8 @@
 
 ## Description
 
+This project will allow the user to calculate their age and time left to live on the various planets in the solar system. It uses object methods to perform the calculations and each was tested with Jest before implementation.
+
 ## Setup/Installation Requirements
 
 1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) this repository from GitHub to your local machine.
@@ -30,8 +32,7 @@ See it hosted directly on [GitHub Pages](https://benjaminw1030.github.io/templat
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* None known.
 
 ## License
 

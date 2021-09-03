@@ -12,8 +12,11 @@ $(document).ready(function () {
     const planet = $("#planet").val();
     const lifeExpectancy = $("#life-expectancy").val();
     const bDayObj = new Calculator(birthday, planet, currentDate, lifeExpectancy);
-    $("#result").fadeIn();
-    $("#age-output").text(bDayObj.ageOutput())
+    $("#planet-img").html("<img class='rounded' src='assets/images/"+ planet + ".jpg' alt" + planet + ">");
+    $("#age-output").text(bDayObj.planetAgeOutput());
     $("#ytl-output").text(bDayObj.yearsToLiveOutput());
+    $(".planet").hide();
+    $(`#${planet}`).show();
+    $("#result").fadeIn();
   });
 });

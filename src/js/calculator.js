@@ -39,7 +39,7 @@ export default class Calculator {
 
   planetAgeOutput() {
     const ageOutput = this.planetAge().toFixed(2);
-    return `You are ${ageOutput} ${this.planet} years old.`
+    return `You are ${ageOutput} ${this.planet} years old.`;
   }
 
   yearsToLiveOutput() {
