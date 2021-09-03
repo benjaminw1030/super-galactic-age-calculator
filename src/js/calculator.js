@@ -41,6 +41,7 @@ export default class Calculator {
     }
   }
   yearsToLiveOutput(planet, lifeExpectancy, currentDate) {
-
+    const years = this.yearsToLive(planet, lifeExpectancy, currentDate).toFixed(2);
+    return `You have ${years} years left to live on ${planet}. Make the most of it!`;
   }
 }
