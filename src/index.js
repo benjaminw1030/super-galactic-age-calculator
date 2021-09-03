@@ -11,26 +11,9 @@ $(document).ready(function () {
     const birthday = $("#birthday").val();
     const planet = $("#planet").val();
     const lifeExpectancy = $("#life-expectancy").val();
-    const bDayObj = new Calculator(birthday);
-    let age;
-    switch (planet) {
-      case "Earth":
-        age = bDayObj.earthAge(currentDate);
-        break;
-      case "Mercury":
-        age = bDayObj.mercuryAge(currentDate);
-        break;
-      case "Venus":
-        age = bDayObj.venusAge(currentDate);
-        break;
-      case "Mars":
-        age = bDayObj.marsAge(currentDate);
-        break;
-      case "Jupiter":
-        age = bDayObj.jupiterAge(currentDate);
-    }
+    const bDayObj = new Calculator(birthday, planet, currentDate, lifeExpectancy);
     $("#result").fadeIn();
-    $("#age-output").text(`you are ${age} ${planet} years old.`)
-    $("#ytl-output").text(bDayObj.yearsToLiveOutput(planet, lifeExpectancy, currentDate));
+    $("#age-output").text(bDayObj.ageOutput())
+    $("#ytl-output").text(bDayObj.yearsToLiveOutput());
   });
 });

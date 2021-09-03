@@ -32,13 +32,14 @@ export default class Calculator {
     const birthdayNum = birthdayObj.valueOf();
     return ((this.currentDate - birthdayNum) / 31536000000) / this.orbitalPeriod();
   }
- 
+
   yearsToLive() {
-      return (this.lifeExpectancy/this.orbitalPeriod()) - this.planetAge(this.currentDate);
+    return (this.lifeExpectancy / this.orbitalPeriod()) - this.planetAge(this.currentDate);
   }
 
   planetAgeOutput() {
-
+    const ageOutput = this.planetAge().toFixed(2);
+    return `You are ${ageOutput} ${this.planet} years old.`
   }
 
   yearsToLiveOutput() {
