@@ -27,7 +27,10 @@ export default class Calculator {
   }
 
   yearsToLive(planet, lifeExpectancy, currentDate) {
-    return lifeExpectancy - this.earthAge(currentDate); 
+    switch (planet) {
+      case "Earth":
+        return lifeExpectancy - this.earthAge(currentDate);
+    }
   }
 }
 

@@ -41,6 +41,9 @@ describe('Calculator', () => {
   });
 
   test('should calculate years to live on any planet from input', () => {
+    expect(calculator.yearsToLive("Mercury", 80, currentDate)).toBeCloseTo(3.64);
+    expect(calculator.yearsToLive("Venus", 80, currentDate)).toBeCloseTo(3.64);
+    expect(calculator.yearsToLive("Mars", 80, currentDate)).toBeCloseTo(3.64);
     expect(calculator.yearsToLive("Jupiter", 80, currentDate)).toBeCloseTo(3.64);
   });
 });
