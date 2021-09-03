@@ -50,4 +50,9 @@ describe('Calculator', () => {
   test('should output a string describing how many years a person has left to live', () => {
     expect(calculator.yearsToLiveOutput("Earth", 80, currentDate)).toEqual("You have 43.13 years left to live on Earth. Make the most of it!");
   });
+
+  test('should output a special string describing how many years a person has lived past their life expectancy', () => {
+    calculator = new Calculator(10, 30, 1904);
+    expect(calculator.yearsToLiveOutput("Earth", 80, currentDate)).toEqual("You have lived 36.92 years past your expected lifespan on Earth. Keep it up!");
+  });
 });
