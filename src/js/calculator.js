@@ -23,7 +23,7 @@ export default class Calculator {
   }
 
   jupiterAge(currentDate) {
-
+    return (this.earthAge(currentDate)/11.86);
   }
 
   lifeExpectancy(currentDate) {
