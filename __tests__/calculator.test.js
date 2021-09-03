@@ -18,4 +18,9 @@ describe('Calculator', () => {
     const currentDate = 1630685647903 //freezes current date value at current time with value of Date.now();
     expect(calculator.earthAge(currentDate)).toEqual(36.87);
   });
+  test('should calculate mercury age from input', () => {
+    const currentDate = 1630685647903
+    expect(calculator.mercuryAge(currentDate)).toEqual(36.87);
+  });
+
 });

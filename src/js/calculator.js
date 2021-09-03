@@ -9,5 +9,9 @@ export default class Calculator {
     const birthday = new Date(this.year, this.month - 1, this.day);
     return parseFloat(((currentDate - birthday) / 31536000000).toFixed(2));
   }
+
+  mercuryAge(currentDate) {
+
+  }
 }
 
