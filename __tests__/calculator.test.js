@@ -28,4 +28,8 @@ describe('Calculator', () => {
     expect(calculator.venusAge(currentDate)).toBeCloseTo(59.47);
   });
 
+  test('should calculate Mars age from input', () => {
+    expect(calculator.marsAge(currentDate)).toBeCloseTo(19.61);
+  });
+
 });
