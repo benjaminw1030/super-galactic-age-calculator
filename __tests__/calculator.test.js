@@ -37,6 +37,6 @@ describe('Calculator', () => {
   });
 
   test('should calculate years to live on Earth from input', () => {
-    expect(calculator.yearsToLive("earth", 80, currentDate)).toBeCloseTo(41.33);
+    expect(calculator.yearsToLive("earth", 80, currentDate)).toBeCloseTo(43.13);
   });
 });
