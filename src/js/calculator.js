@@ -3,7 +3,7 @@ export default class Calculator {
     this.date = date;
   }
 
-  earthAge(currentDate) {
+  planetAge(currentDate) {
     const birthday = new Date(this.date);
     return ((currentDate - birthday) / 31536000000);
   }
