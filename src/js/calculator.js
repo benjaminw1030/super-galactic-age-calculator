@@ -37,6 +37,10 @@ export default class Calculator {
       return (this.lifeExpectancy/this.orbitalPeriod()) - this.planetAge(this.currentDate);
   }
 
+  planetAgeOutput() {
+
+  }
+
   yearsToLiveOutput() {
     const years = this.yearsToLive();
     const yearsOutput = Math.abs(years).toFixed(2);

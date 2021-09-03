@@ -65,10 +65,15 @@ describe('Calculator', () => {
     calculator.planet = "Jupiter"
     expect(calculator.yearsToLive()).toBeCloseTo(3.64);
   });
-
+  
   test('should output a string describing how many years a person has left to live', () => {
+    expect(calculator.planetAgeOutput()).toEqual("You are 36.87 Earth years old.");
+  });
+
+  test('should output a string describing their age in planet years.', () => {
     expect(calculator.yearsToLiveOutput()).toEqual("You have 43.13 years left to live on Earth. Make the most of it!");
   });
+
 
   test('should output a special string describing how many years a person has lived past their life expectancy', () => {
     calculator.birthday = "1904-10-30";
