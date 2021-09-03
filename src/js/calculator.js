@@ -5,7 +5,24 @@ export default class Calculator {
   }
 
   orbitalPeriod() {
-
+    switch (this.planet) {
+      case "Mercury":
+        return .24;
+      case "Venus":
+        return .62;
+      case "Earth":
+        return 1;
+      case "Mars":
+        return 1.88;
+      case "Jupiter":
+        return 11.86;
+      case "Saturn":
+        return 29.46;
+      case "Uranus":
+        return 84.02;
+      case "Neptune":
+        return 164.8;
+    }
   }
 
 

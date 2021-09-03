@@ -16,6 +16,20 @@ describe('Calculator', () => {
 
   test('should calculate an orbital period based on the planet', () => {
     expect(calculator.orbitalPeriod()).toEqual(1);
+    calculator.planet = "Mercury";
+    expect(calculator.orbitalPeriod()).toEqual(.24);
+    calculator.planet = "Venus";
+    expect(calculator.orbitalPeriod()).toEqual(.62);
+    calculator.planet = "Mars";
+    expect(calculator.orbitalPeriod()).toEqual(1.88);
+    calculator.planet = "Jupiter";
+    expect(calculator.orbitalPeriod()).toEqual(11.86);
+    calculator.planet = "Saturn";
+    expect(calculator.orbitalPeriod()).toEqual(29.46);
+    calculator.planet = "Uranus";
+    expect(calculator.orbitalPeriod()).toEqual(84.02);
+    calculator.planet = "Neptune";
+    expect(calculator.orbitalPeriod()).toEqual(164.8);
   });
 
   test('should calculate Earth age from input', () => {
