@@ -4,9 +4,9 @@ describe('Calculator', () => {
 
   let calculator;
   let currentDate;
-  
+   
   beforeEach(() => {
-    calculator = new Calculator("1984-10-30");
+    calculator = new Calculator("1984-10-30", "Earth");
     currentDate = 1630685647903; //freezes current date with value of Date.now() on 9/3/2021.
   });
 
@@ -14,11 +14,17 @@ describe('Calculator', () => {
     expect(calculator.date).toEqual("1984-10-30");
   });
 
+  test('should calculate an orbital period based on the planet', () => {
+    expect(calculator.orbitalPeriod()).toEqual(1);
+  });
+
   test('should calculate Earth age from input', () => {
-    expect(calculator.planetAge(currentDate, "Earth")).toBeCloseTo(36.87);
+    planet = "Earth";
+    expect(calculator.planetAge(currentDate)).toBeCloseTo(36.87);
   });
 
   test('should calculate age on any planet from input', () => {
+    planet = "Mercury";
     expect(calculator.planetAge(currentDate, "Mercury")).toBeCloseTo(153.63);
     expect(calculator.planetAge(currentDate, "Venus")).toBeCloseTo(59.47);
     expect(calculator.planetAge(currentDate, "Mars")).toBeCloseTo(19.61);

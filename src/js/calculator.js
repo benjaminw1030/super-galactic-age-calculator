@@ -1,11 +1,17 @@
 export default class Calculator {
-  constructor(date) {
+  constructor(date, planet) {
     this.date = date;
+    this.planet = planet;
   }
+
+  orbitalPeriod() {
+
+  }
+
 
   planetAge(currentDate) {
     const birthday = new Date(this.date);
-    return ((currentDate - birthday) / 31536000000);
+    return ((currentDate - birthday) / 31536000000) / orbitalPeriod();
   }
 
   mercuryAge(currentDate) {
@@ -27,11 +33,11 @@ export default class Calculator {
   yearsToLive(planet, lifeExpectancy, currentDate) {
     switch (planet) {
       case "Earth":
-        return lifeExpectancy - this.earthAge(currentDate);
+        return lifeExpectancy - this.planetAge(currentDate);
       case "Mercury":
-        return lifeExpectancy / .24 - this.mercuryAge(currentDate);
+        return lifeExpectancy / .24 - this.planetAge(currentDate);
       case "Venus":
-        return lifeExpectancy / .62 - this.venusAge(currentDate);
+        return lifeExpectancy / .62 - this.planetAge(currentDate);
       case "Mars":
         return lifeExpectancy / 1.88 - this.marsAge(currentDate);
       case "Jupiter":
