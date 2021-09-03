@@ -1,4 +1,4 @@
-# (Application Name)
+# Super Galactic Age Calculator
 
 #### (Brief Description of Application)
 
